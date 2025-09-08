@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>طلائع العذراء برحليون</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>طلائع العذراء برحليون</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#events">الأنشطة</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>أهلاً وسهلاً بكم في طلائع العذراء برحليون</h2>
+    <p>نحن مجموعة شبابية روحية نسعى للنمو بالإيمان والمحبة.</p>
+    <button onclick="scrollToSection('contact')">انضم إلينا</button>
+  </section>
+
+  <section id="about">
+    <h3>من نحن</h3>
+    <p>طلائع العذراء هي حركة كنسية تهدف إلى تربية الطلائع روحياً واجتماعياً ضمن روح المحبة والخدمة.</p>
+  </section>
+
+  <section id="events">
+    <h3>الأنشطة</h3>
+    <ul>
+      <li>لقاءات أسبوعية</li>
+      <li>رياضات روحية</li>
+      <li>خدمات مجتمعية</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h3>تواصل معنا</h3>
+    <form onsubmit="handleSubmit(event)">
+      <label for="name">الاسم:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="message">الرسالة:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 طلائع العذراء برحليون. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <style>
+    body {
+  font-family: 'Arial', sans-serif;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #5c4b51;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#hero {
+  background: url('https://via.placeholder.com/1200x400') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#hero button {
+  background-color: #f4a261;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #2a9d8f;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #264653;
+  color: white;
+}
+
+  </style>
+  <script>
+    function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const message = document.getElementById('message').value;
+  alert(`شكراً يا ${name}! تم استلام رسالتك: "${message}"`);
+}
+
+    </script>
+</body>
+</html>
